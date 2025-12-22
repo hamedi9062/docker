@@ -1,63 +1,63 @@
 docker info
-Client: Docker Engine - Community
+Client: Docker Engine - Community #Community Version 29.1.3  # You’re running the community edition of Docker, version 29.1.3.
  Version:    29.1.3
- Context:    default
- Debug Mode: false
+ Context:    default # You’re using the default Docker context (local machine).
+ Debug Mode: false #Debugging is off
  Plugins:
-  buildx: Docker Buildx (Docker Inc.)
+  buildx: Docker Buildx (Docker Inc.) # Advanced build tool for multi-platform images
     Version:  v0.30.1
     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
-  compose: Docker Compose (Docker Inc.)
+  compose: Docker Compose (Docker Inc.) # Docker Compose plugin for multi-container apps
     Version:  v5.0.0
     Path:     /usr/libexec/docker/cli-plugins/docker-compose
-  model: Docker Model Runner (Docker Inc.)
+  model: Docker Model Runner (Docker Inc.) # A newer plugin for running AI/ML models inside Docker
     Version:  v1.0.6
     Path:     /usr/libexec/docker/cli-plugins/docker-model
 
 Server:
- Containers: 2
+ Containers: 2 # You have 2 containers defined, but none are currently running
   Running: 0
   Paused: 0
   Stopped: 2
- Images: 1
+ Images: 1 # Only one Docker image is stored locally
  Server Version: 29.1.3
- Storage Driver: overlayfs
+ Storage Driver: overlayfs # OverlayFS is used to manage container layers (efficient and standard on Linux)
   driver-type: io.containerd.snapshotter.v1
- Logging Driver: json-file
- Cgroup Driver: systemd
+ Logging Driver: json-file # Container logs are stored as JSON files
+ Cgroup Driver: systemd # Resource control is managed by systemd cgroups
  Cgroup Version: 2
  Plugins:
-  Volume: local
-  Network: bridge host ipvlan macvlan null overlay
-  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+  Volume: local # Default volume driver
+  Network: bridge host ipvlan macvlan null overlay # Different networking modes supported
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog # Multiple logging integrations
  CDI spec directories:
   /etc/cdi
   /var/run/cdi
- Swarm: inactive
- Runtimes: io.containerd.runc.v2 runc
- Default Runtime: runc
- Init Binary: docker-init
+ Swarm: inactive # Docker Swarm (clustering/orchestration) is not enabled
+ Runtimes: io.containerd.runc.v2 runc # These are the low-level runtimes used to start containers
+ Default Runtime: runc # The standard OCI runtime
+ Init Binary: docker-init 
  containerd version: dea7da592f5d1d2b7755e3a161be07f43fad8f75
  runc version: v1.3.4-0-gd6d73eb8
  init version: de40ad0
- Security Options:
+ Security Options: # Kernel-level security features enabled
   apparmor
   seccomp
    Profile: builtin
   cgroupns
- Kernel Version: 6.8.0-90-generic
+ Kernel Version: 6.8.0-90-generic # Your host OS kernel version
  Operating System: Ubuntu 24.04.3 LTS
  OSType: linux
  Architecture: x86_64
- CPUs: 2
- Total Memory: 1.875GiB
+ CPUs: 2 # Hardware resources available to Docker
+ Total Memory: 1.875GiB # Hardware resources available to Docker
  Name: ubuntu-server
  ID: b8b2895e-f7f4-4ef8-b9a8-f8a7eb807745
- Docker Root Dir: /var/lib/docker
+ Docker Root Dir: /var/lib/docker # Where Docker stores images, containers, volumes, etc
  Debug Mode: false
  Experimental: false
  Insecure Registries:
   ::1/128
   127.0.0.0/8
  Live Restore Enabled: false
- Firewall Backend: iptables
+ Firewall Backend: iptables # Networking/firewall managed via iptables
