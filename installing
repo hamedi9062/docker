@@ -1,0 +1,9 @@
+# this has been tested on ubuntu server 24 lts
+# The first command uninstalls any previous versions or conflicting packages, ensuring that you're not running older versions of Docker.
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# The second command downloads the Docker installation script for Ubuntu.
+curl -fsSL https://get.docker.com -o get-docker.sh
+# The third command installs the Docker Engine on Ubuntu.
+sudo sh get-docker.sh
+# Run a Simple Test Container to Verify Docker Is Working
+docker run hello-world
