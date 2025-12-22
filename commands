@@ -1,0 +1,4 @@
+docker pull
+docker login
+docker images
+docker image ls
