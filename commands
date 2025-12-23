@@ -1,4 +1,8 @@
 docker pull
 docker login
-docker images
+docker images # -q for id -a for all
 docker image ls
+docker run #yourimage
+usermod -aG docker $user # Add the user to docker group
+# depentdency:
+apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
